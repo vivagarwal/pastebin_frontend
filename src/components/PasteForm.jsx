@@ -16,7 +16,7 @@ function PasteForm() {
     };
 
     const baseUrl = import.meta.env.VITE_BASE_URL;
-    const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
+    const frontendUrl = window.location.origin;
     try {
       const res = await fetch(`${baseUrl}/api/snippets/create`, {
         method: "POST",
